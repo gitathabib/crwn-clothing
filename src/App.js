@@ -1,38 +1,22 @@
-import React from 'react'
-import Categories from './components/categories/Categories.jsx';
+import React from "react";
+import Home from "./components/routes/Home/home.component.jsx";
+import { Route, Routes } from "react-router-dom";
+import Nevigation from "./components/navigation/navigation.component.jsx";
+
+const Shop = ()=>{
+	return(<div>
+		<h1>This is Shop</h1>
+	</div>)
+}
 
 const App = () => {
-
-	const categories = [
-		{
-			id: 1,
-			title: "hats",
-			imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-		},
-		{
-			id: 2,
-			title: "jackets",
-			imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-		},
-		{
-			id: 3,
-			title: "sneakers",
-			imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-		},
-		{
-			id: 4,
-			title: "womens",
-			imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-		},
-		{
-			id: 5,
-			title: "mens",
-			imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-		},
-	];
-	
 	return (
-		<Categories category = {categories}/>
+	<Routes>
+		<Route path="/" element={<Nevigation />}>			
+			<Route index element={<Home />}/> 
+			<Route path="/shop" element={<Shop/>}/>
+		</Route>
+	</Routes>
 	);
 };
 
