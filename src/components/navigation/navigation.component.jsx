@@ -15,7 +15,7 @@ function Nevigation() {
 					<Link className="nav-link" to="/shop">
 						SHOP
 					</Link>
-					<Link className="nav-link-sign-in" to="/sign-in">
+					<Link className="nav-link-sign-in" to="/auth">
 						SIGN IN
 					</Link>
 				</div>
